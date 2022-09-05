@@ -52,10 +52,12 @@ def publish_instagram(caption: str, images_dir: str = 'images'):
         caption (str): Caption of the images to publish.
         images_dir (str): Directory where the images are stored.
     """
+    print('Publishing images')
     cl = Client()
     cl.login(os.environ['INSTAGRAM_USER'], os.environ['INSTAGRAM_PASSWORD'])
     cl.album_upload(paths=get_files(images_dir),
                     caption=caption)
+    print('Done!')
 
 
 if __name__ == '__main__':
