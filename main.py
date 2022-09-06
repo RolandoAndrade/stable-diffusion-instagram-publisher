@@ -93,7 +93,7 @@ def regenerate_images(prompt_list):
                 change_prompt = True
                 if len(prompt_list) > 0:
                     should_change_prompt = input(
-                        'See the "images" directory. Do you want to regenerate any image? (y/N): ' or 'N')
+                        'Do you want to change the prompt? (y/N): ' or 'N')
                     if should_change_prompt.upper() == 'Y':
                         prompt_list[index] = input('New prompt:') or \
                                              prompt_list[index]
